@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Random jokes </title>
+<style>
+body{
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGtuaW82a2x2MnR3eGRuMWhibGltenlpaHpjZGVhYjV2cHNiY3VtNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TW5RIonnbxx2Lgn0i1/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div{
+    background-color: blanchedalmond;
+    padding:10px;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 17px;
+}
+button{
+    margin-top:10px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: greenyellow;
+}
+    </style>
+</head>
+<body>
+<center>
+<h1> Random Jokes Generator </h1>
+<div id="jokes">Click the button!</div>
+<button onclick="jokespicker()"> Generate joke </button>
+</center>
+<script>
+const jokesarray = [
+    "Why did the shark feel funny: because it ate a clownfish!", "What do you call a cute door: a-dor-able!",
+    "What is the fish's favourite music: something catchy!", "What is the metal robot's favourite song: heavy metal!",
+    "Why did the picture go to jail: because it was framed!", "Why did the mushroom go to the party: Because was a fungi (Fun-Guy)",
+];
+function jokespicker(){
+let randomindex = Math.floor(Math.random()*jokesarray.length);
+document.getElementById("jokes").innerHTML = jokesarray[randomindex];
+}
+
+    </script>
+    </body>
+    </html>
